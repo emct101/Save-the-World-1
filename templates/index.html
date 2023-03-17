@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"
+    <title>PW Survey Platform</title>
+    <link rel="stylesheet" type="text/css" href = "{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    <h1>Particulars</h1>
+    <hr>
+    <form method="post" action="/">
+      <label for="name">Name:</label>
+      <input type="text" id ="name" name ="name"/><br>
+
+      <label for="unit">Class:</label>
+      <input type="text" id="unit" name="unit"/><br>
+
+      <label for="who">Parties involved:</label><br>
+      <input type="checkbox" id="teachers" name="who" value="teachers">
+      <label for="teachers">Teachers</label><br>
+
+      <input type="checkbox" id="students" name="who" value="students">
+      <label for="students">Students</label><br>
+
+      <input type="checkbox" id="staff" name="who" value="staff">
+      <label for="staff">Staff</label><br>
+      <input type="submit" value="Submit"/>
+    </form>
+    {% if name %} 
+    <p>{{ name }}</p>
+    {% endif %}  
+    
+    {% if unit %} 
+    <p>{{ unit }}</p>
+    {% endif %}    
+
+    {% if who %} 
+    <p>{{ who }}</p>
+    {% endif %}    
+    
+   
+  </body>
+</html>
