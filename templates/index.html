@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8"
+    <meta charset="utf-8">
     <title>PW Survey Platform</title>
     <link rel="stylesheet" type="text/css" href = "{{ url_for('static', filename='style.css') }}">
   </head>
@@ -24,6 +24,9 @@
 
       <input type="checkbox" id="staff" name="who" value="staff">
       <label for="staff">Staff</label><br>
+
+      <input type="checkbox" id="Top Gi" name="who" value="Top Gi">
+      <label for="Top Gi">Mr Top Gi</label><br>
       <input type="submit" value="Submit"/>
     </form>
     {% if name %} 

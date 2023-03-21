@@ -9,13 +9,14 @@ def index():
   who = None
   if request.method == "POST":
     name = request.form['name']
-    unit = request.form['class']
+    unit = request.form['unit']
     who = request.form.getlist('who')
     who_txt = ''
-    for who in who:
-      who_txt = ' ' + who
+    for who_txt in who:
+      who_txt = who_txt + ','
     with open('database.txt', 'a') as file:
       file.write(name + ',' + unit + ',' + who_txt + '\n')   
+    return f"Thank you for your submission, {name}!"
   return render_template("index.html", name=name, unit=unit, who=who)
   
 
